@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Roboto', sans-serif;
+
+    --fs-primary: 1.6rem;
+
+    --body-color: #000000;
+
+    --text-color: #E1E1E6;
+
+    --fc-button: #F75A68;
+
+    --bc-primary: #065E7C;
+   
+    --bc-secundary: #06181C;
+
+    --bc-terciary: #4A808C;
+
+    --border-color-primary: #092D38;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body {
+    font-size: var(--fs-primary);
+    color: rgb(250, 254, 255);
+    background-color: var(--body-color);
+}
+
+body *{
+    font-family: var(--ff-primary);
+}
+
+.p{
+    position: absolute;
+    gap: 6rem;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    color:#4E5455;
+    font-weight: bold;
+    align-items: center;
+    margin-top: 30rem;
+    margin-left: 20rem;
+}
+
+.hide {
+    display: none;
+}
+
+#app{
+    max-width: 114rem;
+    margin: 2.5rem auto;
+
+}
+
+header{
+    display: flex;
+    margin-bottom: 8.7rem;
+    margin-top: 5rem;
+    gap: 32rem;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.search input{
+    height: 4.5rem;
+    width: 46.2rem;
+    background: var(--bc-secundary);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    padding-left: 1.6rem;
+}
+
+.search button{
+    border-radius: 0.5rem;
+    height: 4.8rem;
+    background: var(--bc-primary);
+    display: flex;
+    padding: 1.6rem 3.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+
+button:hover .path{
+    fill: var(--bc-primary);
+    transition: 500ms;
+}
+
+.search button:hover{
+    background: var(--text-color);
+    color: var(--bc-primary);
+    transition: 500ms;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table *{
+    font-size: 2rem;
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+table tr{
+    align-items: center;
+}
+
+table thead{
+    border-radius: 1.2rem 1.2rem 0 0;
+    background: var(--border-color-primary);
+    border-top: 1px solid var(--bc-terciary);
+    border-left: 1px solid var(--bc-terciary);
+    border-right: 1px solid var(--bc-terciary);
+    display: block;
+}
+
+thead tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table thead th{
+    padding: 1.6rem 6.4rem 1.6rem 4rem;
+    text-align: start;
+}
+
+tbody{
+    display: block;
+    height: clamp(35rem, 10vh, 35rem);
+    border-radius: 0 0 1.2rem 1.2rem;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    border-bottom: 1px solid var(--bc-terciary);
+    border-left: 1px solid var(--bc-terciary);
+    border-right: 1px solid var(--bc-terciary);
+}
+
+tbody tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tbody tr:nth-child(even) {
+    background: var(--bc-secundary);
+    border-bottom: 1px solid var(--bc-terciary);
+}
+tbody tr:nth-child(odd) {
+    background: var(--body-color);
+    border-bottom: 1px solid var(--border-color-primary);
+}
+
+table td{
+    text-align: start;
+    padding: 1.6rem 6.4rem 1.6rem 4rem;
+}
+
+.user {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user a {
+    text-decoration: none;
+} 
+
+.user a p{
+    font-weight: bold;
+} 
+
+.user a span{
+    font-family: 'Roboto Mono', monospace;
+    font-weight:normal;
+    Line-height: 3.2rem;
+} 
+
+table td .remove{
+    background: none;
+    color: var(--fc-button);
+    border: none;
+    cursor: pointer;
+}
+
+tbody::-webkit-scrollbar {
+    width: 0.6rem;
+}
+  
+tbody::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 14px 14px transparent;
+    border: solid 4px transparent;
+}
+  
+tbody::-webkit-scrollbar-thumb {
+    background-color: var(--bc-terciary);
+    border-radius: 5rem;
+}
+  
